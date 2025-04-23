@@ -19,11 +19,10 @@ const App = () => {
   {
     fruit: 'Neutella',
     price: '30'
-  },
-  {
-    fruit: 'Razor',
+  },{
+    fruit:'Razor',
     price: '5'
-  },
+  }
   {
     fruit: 'Cornflakes',
     price: '15'
@@ -46,8 +45,8 @@ const App = () => {
       <h3>Items you can buy are in Green color</h3>
       <ul>
         {
-          obj.map((item) => (
-            <li>{item.fruit}<span style={{color:item.price>val? 'red':'green'}}>{item.price}</span></li>
+          obj.map((item,idx) => (
+            <li key={idx}>{item.fruit}<span style={{color:item.price>=val? 'green':'red'}}>{item.price}</span></li>
           ))
         }
       </ul>
